@@ -28,6 +28,24 @@ If you prefer, or if your jurisdiction does not recognise the concept of a Publi
 * [jQuery](http://jquery.com)
 
 
+## Compatibility
+
+I've tested it on the latest versions (as of 8th May 2013) of:
+
+- Safari, Chrome and Firefox on OS X.
+- Safari on iPad and iPhone.
+
+I'm quite motivated to keep it working on those browsers.
+
+I've also been told by others that it works on:
+
+- Internet Explorer 10 on Windows.
+- Internet Explorer on Windows Phone 7.5.
+- Chrome on iOS.
+
+I am _substantially less motivated_ to keep it working on those, or others I haven't mentioned. But feel free to check/implement such support yourself.
+
+
 ## Installation
 
 Load the JavaScript in your webpage, probably in the HEAD section, like this:
@@ -71,7 +89,11 @@ So far, so good - all of the above footnotes functionality is courtesy of your M
 
 This JavaScript adds something extra: when the user hovers over one of those superscript number-links that reference a footnote, they'll see a popover with the contents of the footnote, so they don't need to actually move away from that part of the page. The popover will be dismissed when the user moves their mouse out of the reference link (or out of the popover itself).
 
-On touch-screen devices, where hovering isn't really possible, the first tap on the link will show the popover, and the second tap will jump to the footnote definition at the bottom of the page. The popover will also have a close/X button (only on touch devices).
+On touch-screen devices, where hovering isn't really possible, the first tap on the link will show the popover, and the second tap will jump to the footnote definition at the bottom of the page. The popover will also have a close/X button (only on touch devices), as shown below on a Retina iPhone in landscape mode:
+
+<div style="text-align:center;">
+<a href="http://www.flickr.com/photos/mattgemmell/8719851479/" title="Footnotes popover on iPhone by Matt Gemmell, on Flickr"><img src="http://farm8.staticflickr.com/7414/8719851479_ce9a8ca7bf.jpg" width="500" height="136" alt="Footnotes popover on iPhone"></a>
+</div>
 
 Popovers will be sized sensibly (and will be capped to the user's screen, when on a mobile device), and their content will scroll if necessary. They will be positioned immediately adjacent to the reference link which spawns them, whenever possible.
 
@@ -88,3 +110,12 @@ There is absolutely no support available. Feel free to report issues on the [git
 Footnotes are best when used judiciously. There's a time and a place for them, but they _do_ momentarily distract the reader from the flow of your piece. This JavaScript helps with that to some extent, but it's not a panacea.
 
 Despite the context, I managed to write this entire Read Me without using a single one. I trust that you'll exercise similar restraint.
+
+
+## A closing note
+
+I'm an iOS/Mac developer, and I don't do much web stuff. JavaScript isn't really one of my regular languages, so do forgive any awfulness. Or make it better, and tell me why mine (or Lukas', I suppose) is rubbish. I do have [lots of Objective-C open source stuff](http://mattgemmell.com/source/) that's guaranteed to be fab. Some of it is probably on your iOS device or Mac right now, actually.
+
+Footnotes are best for medium to long-form writing, like the kind you just aren't doing enough of on your blog lately. How long has it been since you posted something substantial? _That_ long? Similar for me. Perhaps we both ought to make more time for writing this year.
+
+As ever, enjoy the code.
