@@ -52,7 +52,7 @@ Load the JavaScript in your webpage, probably in the HEAD section, like this:
 
 	<script src='/javascripts/footnotes.js' type="text/javascript"></script>
 
-Make sure jQuery is loaded too.
+Make sure jQuery is loaded too. You might also want to use the CSS file in this project, or at least paste its contents into your own stylesheet.
 
 
 ## Installation - Octopress
@@ -61,7 +61,8 @@ If you're using [Octopress](http://octopress.org), you already have jQuery, so d
 
 1. Copy the `footnotes.js` file to `source/javascripts/`
 2. Add the aforementioned line of code to `source/_includes/custom/head.html`
-3. Regenerate and deploy your site.
+3. (Add the CSS wherever you prefer, if you want it.)
+4. Regenerate and deploy your site.
 
 
 ## Making footnotes
