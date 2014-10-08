@@ -10,7 +10,7 @@ Twitter: http://twitter.com/mattgemmell
 */
 
 // this script requires jQuery
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     Footnotes.setup();
 });
 
