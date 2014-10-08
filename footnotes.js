@@ -18,10 +18,10 @@ var Footnotes = {
     footnotetimeout: false,
     setup: function() {
         var footnotelinks = $("a[rel='footnote']")
-        
+
         footnotelinks.unbind('mouseover',Footnotes.footnoteover);
         footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
-        
+
         footnotelinks.bind('mouseover',Footnotes.footnoteover);
         footnotelinks.bind('mouseout',Footnotes.footnoteoout);
     },
@@ -29,7 +29,7 @@ var Footnotes = {
         clearTimeout(Footnotes.footnotetimeout);
         $('#footnotediv').stop();
         $('#footnotediv').remove();
-        
+
         var id = $(this).attr('href').substr(1);
         var position = $(this).offset();
         var div = $(document.createElement('div'));
@@ -40,7 +40,7 @@ var Footnotes = {
         var el = document.getElementById(id);
         var footnoteContent = $(el).html();
         footnoteContent = footnoteContent.replace(/<a[^>]*rev="footnote">.*<\/a>/g, '');
-        
+
         var closeLink;
         if (typeof TouchEvent != "undefined") {
         	// On a touch device.
@@ -53,17 +53,17 @@ var Footnotes = {
 	        	return false;
 	        });
         }
-        
+
         div.html(footnoteContent);
         div.append(closeLink);
-        
+
         var margins = 20;
         var singleMargin = margins / 2.0;
         var max_width = $(window).width() - margins;
         max_width = Math.min(max_width, 400);
         var max_height = $(window).height() - margins;
         max_height = Math.min(max_height, 300);
-        
+
         div.css({
             position:'absolute',
             width:'auto',
@@ -73,7 +73,7 @@ var Footnotes = {
             overflow:'auto'
         });
         $(document.body).append(div);
-		
+
 		var actual_width = div.width();
         var left = position.left;
         if (left + (margins + actual_width)  > $(window).width() + $(window).scrollLeft()) {
